@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cal+Sans&family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+
     </head>
-    <body>
+    <body id="body">
         <header class = "header">
             <li>
                 <a href="#about">About</a>
@@ -24,63 +26,82 @@
             
         </header>
         
-        <div class="about">
-            <div class = "pfp"></div>
-                <img src="profile.png" alt="">
+        <div class="about" id="about">
+            <div class = "pfp">
+                <img src="images/pfp.webp" alt="">
             </div>
             <div class="intro">
-            <h1>Hello, my name is <span class="highlight">Amel</span> ⛰️</h1>
-            <p>I am an aspiring software engineer currently studying BSc Computer Science at the <span class="highlight">University of Southampton.</span></p>
-            <div class="socials">
-            <a href="https://www.linkedin.com/in/amel-plagne-ismail-8046a8338/" target="_blank"><img src="linkedin.png"></a>
-            <a href="https://github.com/aamel06" target="_blank"><img src="github.png"></a>
-            </div>    
-        </div>
-        </div>
+                <h1>Hello, my name is <span class="highlight">Amel</span> ⛰️</h1>
+                <p>I am an aspiring software engineer currently studying BSc Computer Science at the <span class="highlight">University of Southampton.</span></p>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/amel-plagne-ismail-8046a8338/" target="_blank"><img src="images/linkedin.png"></a>
+                    <a href="https://github.com/aamel06" target="_blank"><img src="images/github.png"></a>
+                </div>
+            </div>
 
-        <div class="skills">
+        </div>
+        <div class="skills" id="skills">
             <h2>Skills</h2>
             <h3>Languages</h3>
             <div class="languages">
                 <a href="https://www.python.org/" target="_blank">Python</a>
                 <a href="https://www.java.com/en/" target="_blank">Java</a>
                 <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank">C</a>
-                <a href="https://en.wikipedia.org/wiki/SQL" target="_blank">SQL</a>
                 <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a>
                 <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a>
+                <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">JavaScript</a>
+                <a href="https://en.wikipedia.org/wiki/SQL" target="_blank">SQL</a>
             </div>
             <h3>Tools</h3>
             <div class="tools">
                 <a href="" target="_blank">GitHub</a>
-                <a href="" target="_blank">Docker</a>
+                <a href="" target="_blank">VS Code</a>
                 <a href="" target="_blank">IntelliJ</a>
                 <a href="" target="_blank">PyCharm</a>
-                <a href="" target="_blank">Godot</a>
+                <a href="" target="_blank">Docker</a>
             </div>
         </div>
-        <div class="projects">
+        <div class="projects" id="projects">
             <h2>Projects</h2>
             <article class="project">
                 <div class="inside">
-                <h3>𖦏 Outbreak Assault</h3>
-                <p>A top-down zombie shooter built using the Godot game engine.</p>
-                <a href="https://aa101.itch.io/outbreak-assault" target="_blank">Check it out here!</a>
-                </div>
+                <h3>⚡︎ Type Flow</h3>
+                <p>A typing speed test website with multiple different gamemodes.</p>
+                <a href=" https://aamel06.github.io/Typeflow/" target="_blank" id="typeflowLink">Check it out here!</a>
+                <div class="tags">
+                <a href="https://www.java.com/en/" target="_blank">HTML</a>
+                <a href="https://www.java.com/en/" target="_blank">CSS</a>
+                <a href="https://www.java.com/en/" target="_blank">JavaScript</a>
+            </div>
+            </div>
+ 
             </article>
             <article class="project">
                 <div class="inside">
                 <h3>→ Image Converter</h3>
                 <p>A straight-forward image converter. Capable of converting jpg, png, bmp, gif, webp and even .pdf files.</p>
                 <a href="https://github.com/aamel06/Image-Converter" target="_blank">Check it out here!</a>
+                <div class="tags">
+                    <a href="https://www.java.com/en/" target="_blank">Java</a>
+                    <a href="https://www.java.com/en/" target="_blank">JavaFX</a>
+                    <a href="https://www.java.com/en/" target="_blank">CSS</a>
+                </div>
             </div>
             </article>
             <article class="project">
                 <div class="inside">
-                <p>...</p>
+                    <h3>𖦏 Outbreak Assault</h3>
+                    <p>A top-down zombie shooter built using the Godot game engine.</p>
+                    <a href="https://aa101.itch.io/outbreak-assault" target="_blank">Check it out here!</a>
+                    <div class="tags">
+                        <a href="https://www.java.com/en/" target="_blank">GD Script</a>
+
+                    </div>
                 </div>
             </article>
+
         </div>
-        <div class="contact">
+        <div class="contact" id="contact">
             <h2>Contact</h2>
             <form action="amel.pi2006@gmail.com" method="post" enctype="text/plain">
 
@@ -93,5 +114,35 @@
             <button type="submit">Send</button>
             </form>
         </div>
+
+        <footer>
+            <p>Amel Plagne-Ismail</p>
+            <a href="mailto:amel.pi2006@gmail.com">amel.pi2006@gmail.com</a>
+        </footer>
+        <s cript src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+        <script>
+            const cursor = new MouseFollower({
+            container: document.body,
+            speed: 1,
+            });
+
+            const tfElement = document.getElementById("typeflowLink");
+            
+            window.onload = () => {
+                cursor.hide();
+                
+            }
+            
+            tfElement.addEventListener('mouseenter', () => {
+                cursor.show();
+                cursor.setImg("images/typeflowImagePreview.png")
+            });
+            tfElement.addEventListener('mouseleave', () => {
+                cursor.hide();
+                cursor.removeImg()
+            });
+        </script>
+        <script src="scripts/script.js"></script>
      </body>
 </html>

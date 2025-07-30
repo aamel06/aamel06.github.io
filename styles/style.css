@@ -1,0 +1,420 @@
+@keyframes pfpAppear {
+    from {
+        opacity: 0;
+        scale: 0.2;
+    }
+    to {
+        opacity: 1;
+        scale: 1.2;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes skillAppear {
+    from {
+        opacity: 0;
+        scale: 0.2;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes projectAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes contactAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+:rot{
+    --bgColour: #ECDFCC;
+    --fgColour:#323532;
+    --buttonColour: rgba(100, 112, 100, 0.577);
+    --darkButtonColour:#2b302b;
+    --accentColour : #a3b0a0;
+    --lightAccent: #c4d5c0;;
+    --darkAccent:#768074;
+    --mainFont:"Be Vietnam Pro";
+}
+
+:root{
+    --bgColour: #1E201E;
+    --fgColour:#ECDFCC;
+    --buttonColour: rgba(55, 61, 55, 0.577);
+    --darkButtonColour:#2b302b;
+    --accentColour : #a3b0a0;
+    --lightAccent: #c4d5c0;;
+    --darkAccent:#768074;
+    --mainFont:"Be Vietnam Pro";
+}
+
+:rot{
+    --bgColour: #1E201E;
+    --fgColour:#ECDFCC;
+    --buttonColour: rgba(55, 61, 55, 0.577);
+    --darkButtonColour:#2b302b;
+    --accentColour : #a3b0a0;
+    --lightAccent: #c4d5c0;;
+    --darkAccent:#768074;
+    --mainFont:"Be Vietnam Pro";
+}
+
+body {
+    background: var(--bgColour);
+
+.highlight {
+    color: var(--accentColour);
+}
+
+h1,h2,h3,h4,p,li,a{
+    font-family: var(--mainFont), sans-serif;
+
+}
+
+header{
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-color: var(--buttonColour);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    z-index: 10000;
+    list-style-type: none;
+}
+li a{
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--accentColour);
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+li a:hover{
+    color: var(--lightAccent);
+    transform: scale(1.1);
+}
+
+.about {
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+    /* padding-top: 100px; */
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    /* border: 1px solid #ccc; */
+}
+
+h1{
+    color: var(--fgColour);
+    font-size: 3.5rem;
+}
+
+p{
+    color: var(--fgColour);
+    font-size: 1rem;
+    letter-spacing: 1px;
+
+}
+
+h2{
+    text-align: center;
+    color: var(--fgColour);
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+}
+
+h3{
+    color: var(--accentColour);
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+.about .pfp img{
+    width: 100%;
+    width: 250px;
+    object-fit: cover;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 0.4rem var(--accentColour));
+    transition: transform 0.4s ease;
+
+    animation: pfpAppear linear;
+    animation-timeline: view();
+    animation-range: entry 9% cover 40%;
+    
+}
+
+.about .pfp img:hover{
+    transform: scale(1.1);
+}
+
+.intro{
+    flex: 1;
+}
+
+.socials img{
+    background-color: var(--accentColour);
+    max-width: 40px;
+    margin-right: 10px;
+}
+
+.socials img:hover{
+    background-color: var(--darkAccent);
+}
+
+.divider img{
+    width: 100%;
+}
+
+.skills{
+    width: 65%;
+    margin: 200px auto;
+    align-items: center;
+    height: 100vh;
+    padding-top: 50px;
+
+}
+
+
+.skills a{
+    color: var(--accentColour);
+    text-decoration: none;
+    font-size: 1.2rem;
+    background-color: var(--buttonColour);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 0 0.75rem var(--buttonColour));
+    animation: skillAppear linear;
+    animation-timeline: view();
+    animation-range: entry 9% cover 40%;
+
+}
+
+.skills h3{
+    text-align: center;
+
+}
+
+.skills a:hover{
+    color: var(--darkAccent);
+    transform: scale(1.1);
+}
+
+.skills .languages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skills .tools{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.projects{
+    height: 100vh;
+    padding-top: 50px;
+}
+
+.projects img{
+    width:180px;
+    height:140px;
+
+}
+
+.projects h3{
+    color: var(--accentColour);
+    font-weight: bold;
+}
+
+.projects p{
+    color:var(--accentColour);
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+.projects .project{
+    display: flex;
+    background-color: var(--buttonColour);
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 60%;
+    padding: 20px;
+    border-radius: 1rem;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 0 0.75rem var(--buttonColour));
+    animation: projectAppear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    
+}
+
+.projects .inside{
+    /* text-align: left; */
+    padding-left: 20px;
+}
+
+.projects a {
+    font-family: "Be Vietnam Pro", sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--darkAccent);
+    display: inline-block;
+    transition: transform 1s ease;
+}
+
+.projects a:hover{
+    color: var(--accentColour);
+    transform: scale(1.08);
+}
+
+.projects  .project:hover{
+    transform: scale(1.05);
+    background-color: var(--darkButtonColour);
+}
+
+.projects .tags{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.projects .tags a{
+    color: var(--accentColour);
+    font-family: "Be Vietnam Pro", sans-serif;
+    text-decoration: none;
+    font-size: 0.9rem;
+    /*background-color: #2a2d2a;*/
+    margin-left: 10px;
+    transition: transform 0.4s ease;
+    text-align: right;
+}
+
+.projects .tags a:hover{
+    transform:scale(1.1);
+    color: var(--lightAccent);
+
+}
+
+.contact{
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    height: 60vh;
+    padding-top: 50px;
+    filter: drop-shadow(0 0 0.75rem var(--buttonColour));
+}
+
+.contact form{
+    font-family: "Be Vietnam Pro", sans-serif;
+    color:var(--accentColour);
+    background-color: var(--buttonColour);
+    padding: 10px;
+    border-radius: 2rem;
+    font-size: 1rem;
+    animation: contactAppear linear;
+    animation-timeline: view();
+    animation-range: entry 9% cover 40%;
+    
+}
+
+input{
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--darkButtonColour);
+    color: var(--accentColour);
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1rem;
+}
+
+textarea{
+    width: 85%;
+    max-width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--darkButtonColour);
+    color: var(--accentColour);
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1rem;
+}
+
+.contact button{
+    background-color: var(--darkButtonColour);
+    border: none;
+    border-radius: 1rem;
+    padding: 12px 20px;
+    color: var(--accentColour);
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1rem;
+}
+
+.contact button:hover{
+    background-color: var(--bgColour);
+}
+
+footer{
+    text-align: center;
+    color: #a3b0a0;
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+footer a{
+    color: #a3b0a0;
+    text-decoration: none;
+}
+
+.lightmodeECDFCC{
+    color: 1E201E;
+}
+
+.lightmode1E201E{
+    color:#ECDFCC;
+}
+
+}
