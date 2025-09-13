@@ -125,14 +125,12 @@ li a:hover{
     width: 50%;
     height: 100vh;
     margin: 0 auto;
-    /* padding-top: 100px; */
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 5rem;
-    /* border: 1px solid #ccc; */
 }
 
 h1{
@@ -250,7 +248,7 @@ h3{
 }
 
 .projects{
-    height: 100vh;
+    /* height: 100vh; */
     padding-top: 50px;
 }
 
@@ -335,7 +333,7 @@ h3{
     width: 40%;
     margin: 0 auto;
     text-align: center;
-    height: 60vh;
+    /* height: 60vh; */
     padding-top: 50px;
     filter: drop-shadow(0 0 0.75rem var(--buttonColour));
 }
