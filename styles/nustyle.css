@@ -1,3 +1,51 @@
+@keyframes pfpAppear {
+    from {
+        opacity: 0;
+        scale: 0.2;
+    }
+    to {
+        opacity: 1;
+        scale: 1.2;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes skillAppear {
+    from {
+        opacity: 0;
+        scale: 0.2;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes projectAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes contactAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 :root{
     --bgColour: #1E201E;
     --fgColour:#ECDFCC;
@@ -35,6 +83,30 @@ li a:hover{
 h1{
     color: var(--fgColour);
     font-size: 3.5rem;
+}
+
+h2{
+    text-align: center;
+    color: var(--fgColour);
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+}
+
+h3{
+    color: var(--accentColour);
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+
+p{
+    color: var(--fgColour);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+a{
+    text-decoration: none;
 }
 
 .header{
@@ -99,6 +171,149 @@ h1{
     background-color: var(--darkAccent);
 }
 
-.divider img{
-    width: 100%;
+.skills{
+    width: 65%;
+    margin: 200px auto;
+    align-items: center;
+    padding-top: 50px;
 }
+
+.skill{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.item{
+    color: var(--accentColour);
+    background-color: var(--buttonColour);
+    padding: 0.5rem 1.5rem;
+    border-radius: 3rem;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 0 0.75rem var(--buttonColour));
+    animation: skillAppear linear;
+    animation-timeline: view();
+    animation-range: entry 9% cover 40%;
+}
+
+.item:hover{
+    color: var(--darkAccent);
+    transform: scale(1.1);
+}
+
+.projects{
+    padding-top: 50px;
+}
+
+.projects p{
+    color: var(--accentColour);
+}
+
+.projects .project{
+    display: flex;
+    background-color: var(--buttonColour);
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 55%;
+    padding: 25px;
+    border-radius: 1rem;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 0 0.75rem var(--buttonColour));
+    animation: projectAppear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+.projects a{
+    font-family: "Be Vietnam Pro", sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    color: var(--darkAccent);
+    display: inline-block;
+    transition: transform 1s ease;
+}
+
+.projects .tags{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.projects .tags p{
+    font-family: "Be Vietnam Pro", sans-serif;
+    text-decoration: none;
+    font-size: 0.9rem;
+    /*background-color: #2a2d2a;*/
+    margin-left: 10px;
+    transition: transform 0.4s ease;
+    text-align: right;
+}
+
+.projects a:hover{
+    color: var(--accentColour);
+    transform: scale(1.08);
+}
+
+.projects  .project:hover{
+    transform: scale(1.05);
+    background-color: var(--darkButtonColour);
+}
+
+.contact{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    /* height: 60vh; */
+    padding-top: 50px;
+    filter: drop-shadow(0 0 0.75rem var(--buttonColour));
+}
+
+.contact form{
+    font-family: "Be Vietnam Pro", sans-serif;
+    color:var(--accentColour);
+    background-color: var(--buttonColour);
+    padding: 10px;
+    border-radius: 2rem;
+    font-size: 1rem;
+    animation: contactAppear linear;
+    animation-timeline: view();
+    animation-range: entry 9% cover 40%;
+    
+}
+
+.inp{
+    width: 85%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--darkButtonColour);
+    color: var(--accentColour);
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 1rem;
+}
+
+.contact button{
+    background-color: var(--darkButtonColour);
+    border: none;
+    border-radius: 1rem;
+    padding: 12px 20px;
+    color: var(--accentColour);
+    font-family: var(--mainFont), sans-serif;
+    font-size: 1.5rem;
+}
+
+.contact button:hover{
+    background-color: var(--bgColour);
+}
+
+footer{
+    text-align: center;
+    color: #a3b0a0;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+

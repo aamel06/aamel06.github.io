@@ -199,13 +199,13 @@ h3{
     width: 65%;
     margin: 200px auto;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     padding-top: 50px;
 
 }
 
 
-.skills a{
+.item{
     color: var(--accentColour);
     text-decoration: none;
     font-size: 1.2rem;
@@ -226,7 +226,7 @@ h3{
 
 }
 
-.skills a:hover{
+.item:hover{
     color: var(--darkAccent);
     transform: scale(1.1);
 }
@@ -267,6 +267,7 @@ h3{
     color:var(--accentColour);
     font-family: "Be Vietnam Pro", sans-serif;
 }
+
 .projects .project{
     display: flex;
     background-color: var(--buttonColour);
@@ -280,7 +281,6 @@ h3{
     animation: projectAppear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
-    
 }
 
 .projects .inside{
@@ -312,7 +312,7 @@ h3{
     justify-content: flex-end;
 }
 
-.projects .tags a{
+.projects .tags p{
     color: var(--accentColour);
     font-family: "Be Vietnam Pro", sans-serif;
     text-decoration: none;
@@ -323,7 +323,7 @@ h3{
     text-align: right;
 }
 
-.projects .tags a:hover{
+.projects .tags p:hover{
     transform:scale(1.1);
     color: var(--lightAccent);
 
@@ -353,6 +353,7 @@ h3{
 
 input{
     width: 85%;
+    max-width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
